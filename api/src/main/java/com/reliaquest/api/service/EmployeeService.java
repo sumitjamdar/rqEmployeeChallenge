@@ -3,6 +3,7 @@ package com.reliaquest.api.service;
 import com.reliaquest.api.dao.EmployeeDao;
 import com.reliaquest.api.dto.EmployeeDto;
 import com.reliaquest.api.dto.EmployeeInput;
+import com.reliaquest.api.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import org.slf4j.Logger;
@@ -32,14 +33,16 @@ public class EmployeeService {
                 .toList();
     }
 
-    public Optional<EmployeeDto> getEmployeeById(String id) {
+    public EmployeeDto getEmployeeById(String id) {
+        logger.info("Searching Employee by Id: {}", id);
         List<EmployeeDto> employeeDtos = employeeDao.getAllEmployees();
         return employeeDtos.stream()
                 .filter(emp -> emp.getId().equals(id))
-                .findFirst();
+                .findFirst().orElseThrow(() -> new ResourceNotFoundException("Employee with provided id not found"));
     }
 
     public Integer getHighestSalaryOfEmployees() {
+        logger.info("Searching highest paid employee");
         List<EmployeeDto> employeeDtos = employeeDao.getAllEmployees();
         return employeeDtos.stream()
                 .map(EmployeeDto::getEmployeeSalary)
@@ -48,21 +51,23 @@ public class EmployeeService {
                 .orElse(0);
     }
 
-    public List<String> getTopTenHighestEarningEmployeeNames() {
+    public List<EmployeeDto> getTopTenHighestEarningEmployeeNames() {
+        logger.info("Searching top ten highest paid employees");
         List<EmployeeDto> employeeDtos = employeeDao.getAllEmployees();
         return employeeDtos.stream()
                 .filter(emp -> emp.getEmployeeSalary() != null)
                 .sorted(Comparator.comparing(EmployeeDto::getEmployeeSalary).reversed())
                 .limit(10)
-                .map(EmployeeDto::getEmployeeName)
                 .toList();
     }
 
     public EmployeeDto createEmployee(EmployeeInput employeeInput) {
+        logger.info("Creating employee with name:{}", employeeInput.getName());
         return employeeDao.createEmployee(employeeInput);
     }
 
     public boolean deleteEmployeeById(String name) {
+        logger.info("Deleting employee with name: {}", name);
        return employeeDao.deleteEmployeeByName(name);
     }
 }

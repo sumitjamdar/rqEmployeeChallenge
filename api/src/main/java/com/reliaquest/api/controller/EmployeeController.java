@@ -34,9 +34,7 @@ public class EmployeeController implements IEmployeeController<EmployeeDto, Empl
     @Override
     @GetMapping("/{id}")
     public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable String id) {
-        return employeeService.getEmployeeById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        return ResponseEntity.ok( employeeService.getEmployeeById(id));
     }
 
     @Override
@@ -47,7 +45,7 @@ public class EmployeeController implements IEmployeeController<EmployeeDto, Empl
 
     @Override
     @GetMapping("/topTenHighestEarningEmployeeNames")
-    public ResponseEntity<List<String>> getTopTenHighestEarningEmployeeNames() {
+    public ResponseEntity<List<EmployeeDto>> getTopTenHighestEarningEmployeeNames() {
         return ResponseEntity.ok(employeeService.getTopTenHighestEarningEmployeeNames());
     }
 
@@ -60,7 +58,7 @@ public class EmployeeController implements IEmployeeController<EmployeeDto, Empl
 
     @Override
     @DeleteMapping("/{name}")
-    public ResponseEntity<String> deleteEmployeeById(@PathVariable String name) {
+    public ResponseEntity<String> deleteEmployeeByName(@PathVariable String name) {
         boolean deleted = employeeService.deleteEmployeeById(name);
         if (deleted) {
             return ResponseEntity.ok(name);

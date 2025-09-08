@@ -28,7 +28,7 @@ public class EmployeeDao {
         EmployeeResponseDto response =
                 restServiceHelper.execute(employeeApiBaseUrl, HttpMethod.GET, null, EmployeeResponseDto.class);
         List<EmployeeDto> employeeDtos = response.getData();
-        logger.info("Fetched: {} employees", employeeDtos);
+        logger.info("Fetched: {} employees", employeeDtos.size());
         return employeeDtos;
     }
 

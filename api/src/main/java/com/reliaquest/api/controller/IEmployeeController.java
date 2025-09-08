@@ -1,6 +1,8 @@
 package com.reliaquest.api.controller;
 
 import java.util.List;
+
+import com.reliaquest.api.dto.EmployeeDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,11 +25,11 @@ public interface IEmployeeController<Entity, Input> {
     ResponseEntity<Integer> getHighestSalaryOfEmployees();
 
     @GetMapping("/topTenHighestEarningEmployeeNames")
-    ResponseEntity<List<String>> getTopTenHighestEarningEmployeeNames();
+    ResponseEntity<List<EmployeeDto>> getTopTenHighestEarningEmployeeNames();
 
     @PostMapping()
     ResponseEntity<Entity> createEmployee(@RequestBody Input employeeInput);
 
     @DeleteMapping("/{name}")
-    ResponseEntity<String> deleteEmployeeById(@PathVariable String name);
+    ResponseEntity<String> deleteEmployeeByName(@PathVariable String name);
 }

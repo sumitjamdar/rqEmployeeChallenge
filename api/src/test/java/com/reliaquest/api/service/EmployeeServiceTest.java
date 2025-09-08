@@ -3,9 +3,11 @@ package com.reliaquest.api.service;
 import com.reliaquest.api.dao.EmployeeDao;
 import com.reliaquest.api.dto.EmployeeDto;
 import com.reliaquest.api.dto.EmployeeInput;
+import com.reliaquest.api.exception.ResourceNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,16 +54,14 @@ class EmployeeServiceTest {
     @Test
     void testGetEmployeeById_found() {
         when(dao.getAllEmployees()).thenReturn(List.of(makeEmployee("1", "John", 1000)));
-        Optional<EmployeeDto> result = service.getEmployeeById("1");
-        assertTrue(result.isPresent());
-        assertEquals("John", result.get().getEmployeeName());
+        EmployeeDto result = service.getEmployeeById("1");
+        assertEquals("John", result.getEmployeeName());
     }
 
     @Test
     void testGetEmployeeById_notFound() {
         when(dao.getAllEmployees()).thenReturn(List.of(makeEmployee("1", "John", 1000)));
-        Optional<EmployeeDto> result = service.getEmployeeById("2");
-        assertTrue(result.isEmpty());
+        assertThrows(ResourceNotFoundException.class, () -> service.getEmployeeById("2"));
     }
 
     @Test
@@ -93,8 +93,10 @@ class EmployeeServiceTest {
         );
         when(dao.getAllEmployees()).thenReturn(employeeDtos);
 
-        List<String> top = service.getTopTenHighestEarningEmployeeNames();
-        assertEquals(List.of("D", "B", "C", "A"), top);
+        List<EmployeeDto> top = service.getTopTenHighestEarningEmployeeNames();
+
+        List<EmployeeDto> expected = employeeDtos.stream().sorted(Comparator.comparing(EmployeeDto::getEmployeeSalary).reversed()).toList();
+        assertEquals(expected, top);
     }
 
     @Test
