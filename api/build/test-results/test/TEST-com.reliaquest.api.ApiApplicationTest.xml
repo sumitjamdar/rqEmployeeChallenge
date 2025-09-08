@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reliaquest.api.ApiApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-08T05:31:26" hostname="Sumits-MacBook-Air.local" time="0.55">
+  <properties/>
+  <testcase name="someTest()" classname="com.reliaquest.api.ApiApplicationTest" time="0.55"/>
+  <system-out><![CDATA[11:01:24.955 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.reliaquest.api.ApiApplicationTest]: ApiApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:01:25.057 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.reliaquest.api.ApiApplication for test class com.reliaquest.api.ApiApplicationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v3.2.10)
+
+2025-09-08T11:01:25.437+05:30  INFO 88469 --- [employee-api] [    Test worker] com.reliaquest.api.ApiApplicationTest    : Starting ApiApplicationTest using Java 17.0.12 with PID 88469 (started by sumitjamdar in /Users/sumitjamdar/Downloads/reliaquest/java-employee-challenge/api)
+2025-09-08T11:01:25.438+05:30  INFO 88469 --- [employee-api] [    Test worker] com.reliaquest.api.ApiApplicationTest    : No active profile set, falling back to 1 default profile: "default"
+2025-09-08T11:01:26.327+05:30  INFO 88469 --- [employee-api] [    Test worker] com.reliaquest.api.ApiApplicationTest    : Started ApiApplicationTest in 1.147 seconds (process running for 2.058)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

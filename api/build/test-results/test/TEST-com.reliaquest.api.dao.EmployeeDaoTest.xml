@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reliaquest.api.dao.EmployeeDaoTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-09-08T05:31:27" hostname="Sumits-MacBook-Air.local" time="0.037">
+  <properties/>
+  <testcase name="testDeleteEmployeeByName()" classname="com.reliaquest.api.dao.EmployeeDaoTest" time="0.024"/>
+  <testcase name="testCreateEmployee()" classname="com.reliaquest.api.dao.EmployeeDaoTest" time="0.001"/>
+  <testcase name="testGetAllEmployees()" classname="com.reliaquest.api.dao.EmployeeDaoTest" time="0.011"/>
+  <system-out><![CDATA[2025-09-08T11:01:27.088+05:30  INFO 88469 --- [employee-api] [    Test worker] com.reliaquest.api.dao.EmployeeDao       : Fetching all employees
+2025-09-08T11:01:27.088+05:30  INFO 88469 --- [employee-api] [    Test worker] com.reliaquest.api.dao.EmployeeDao       : Fetched: [EmployeeDto(id=1, employeeName=John, employeeSalary=null, employeeAge=null, employeeTitle=null, employeeEmail=null)] employees
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

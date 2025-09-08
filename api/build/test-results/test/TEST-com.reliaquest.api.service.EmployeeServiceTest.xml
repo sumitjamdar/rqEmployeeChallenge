@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reliaquest.api.service.EmployeeServiceTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-09-08T05:31:27" hostname="Sumits-MacBook-Air.local" time="0.034">
+  <properties/>
+  <testcase name="testGetTopTenHighestEarningEmployeeNames()" classname="com.reliaquest.api.service.EmployeeServiceTest" time="0.021"/>
+  <testcase name="testGetHighestSalaryOfEmployees()" classname="com.reliaquest.api.service.EmployeeServiceTest" time="0.001"/>
+  <testcase name="testGetEmployeesByNameSearch_caseInsensitive()" classname="com.reliaquest.api.service.EmployeeServiceTest" time="0.002"/>
+  <testcase name="testDeleteEmployeeById()" classname="com.reliaquest.api.service.EmployeeServiceTest" time="0.001"/>
+  <testcase name="testGetEmployeeById_found()" classname="com.reliaquest.api.service.EmployeeServiceTest" time="0.001"/>
+  <testcase name="testGetEmployeeById_notFound()" classname="com.reliaquest.api.service.EmployeeServiceTest" time="0.001"/>
+  <testcase name="testCreateEmployee()" classname="com.reliaquest.api.service.EmployeeServiceTest" time="0.001"/>
+  <testcase name="testGetAllEmployees()" classname="com.reliaquest.api.service.EmployeeServiceTest" time="0.0"/>
+  <testcase name="testGetHighestSalaryOfEmployees_emptyList()" classname="com.reliaquest.api.service.EmployeeServiceTest" time="0.001"/>
+  <system-out><![CDATA[2025-09-08T11:01:27.122+05:30  INFO 88469 --- [employee-api] [    Test worker] c.r.api.service.EmployeeService          : Searching employees by name: alice
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

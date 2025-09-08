@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reliaquest.api.controller.EmployeeControllerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-09-08T05:31:26" hostname="Sumits-MacBook-Air.local" time="0.166">
+  <properties/>
+  <testcase name="testGetTopTenHighestEarningEmployeeNames()" classname="com.reliaquest.api.controller.EmployeeControllerTest" time="0.145"/>
+  <testcase name="testGetHighestSalaryOfEmployees()" classname="com.reliaquest.api.controller.EmployeeControllerTest" time="0.001"/>
+  <testcase name="testDeleteEmployeeById_failure()" classname="com.reliaquest.api.controller.EmployeeControllerTest" time="0.004"/>
+  <testcase name="testGetEmployeeById_found()" classname="com.reliaquest.api.controller.EmployeeControllerTest" time="0.003"/>
+  <testcase name="testGetEmployeeById_notFound()" classname="com.reliaquest.api.controller.EmployeeControllerTest" time="0.002"/>
+  <testcase name="testCreateEmployee()" classname="com.reliaquest.api.controller.EmployeeControllerTest" time="0.002"/>
+  <testcase name="testGetAllEmployees()" classname="com.reliaquest.api.controller.EmployeeControllerTest" time="0.001"/>
+  <testcase name="testGetEmployeesByNameSearch()" classname="com.reliaquest.api.controller.EmployeeControllerTest" time="0.001"/>
+  <testcase name="testDeleteEmployeeById_success()" classname="com.reliaquest.api.controller.EmployeeControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

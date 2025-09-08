@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reliaquest.api.service.RestServiceHelperTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-09-08T05:31:27" hostname="Sumits-MacBook-Air.local" time="0.216">
+  <properties/>
+  <testcase name="testNotFound()" classname="com.reliaquest.api.service.RestServiceHelperTest" time="0.203"/>
+  <testcase name="testSuccessWithBody()" classname="com.reliaquest.api.service.RestServiceHelperTest" time="0.001"/>
+  <testcase name="testServerError()" classname="com.reliaquest.api.service.RestServiceHelperTest" time="0.003"/>
+  <testcase name="testTooManyRequests()" classname="com.reliaquest.api.service.RestServiceHelperTest" time="0.001"/>
+  <testcase name="testGenericException()" classname="com.reliaquest.api.service.RestServiceHelperTest" time="0.001"/>
+  <testcase name="testNon2xxStatus()" classname="com.reliaquest.api.service.RestServiceHelperTest" time="0.001"/>
+  <testcase name="testSuccessWithNullBody()" classname="com.reliaquest.api.service.RestServiceHelperTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
